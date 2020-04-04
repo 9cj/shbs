@@ -1,7 +1,4 @@
-#keytool -genkey -alias tomcat -dname "CN=Andy,OU=kfit,O=kfit,L=HaiDian,ST=BeiJing,C=CN" -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keyst
- #ore.p12 -validity 365
-
-
+#keytool -genkey -alias tomcat -dname "CN=Andy,OU=kfit,O=kfit,L=HaiDian,ST=BeiJing,C=CN" -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 365
 
 server:
   port: 8080
@@ -12,7 +9,7 @@ server:
     key-store-password: 123456
     enabled: true
 
-# ˝æ›ø‚≈‰÷√
+
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/mysql?tinyInt1isBit=false
@@ -24,5 +21,8 @@ spring:
 mybatis:
   type-aliases-package: com.springboot.pojo
   mapper-locations: classpath:mapper/*.xml
+
+
+
 
 
